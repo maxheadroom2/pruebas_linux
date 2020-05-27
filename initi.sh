@@ -20,3 +20,4 @@ rutA1=/home/ghiatest/rutinas
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
 nohup gnome-terminal -x mplayer -shuffle /home/ghiatest/Música/*.mp3
 notify-send "Audio" "Se reproduce en modo suffle los archivos"
+notify-send "Audio" "Se reproduce en modo suffle los archivos"
