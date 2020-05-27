@@ -10,7 +10,8 @@
 
 # rutas generales del sistema
 
-rutA1=/home/ghiatest/rutinas
+rutaP=/home/ghiatest/Pruebas
+rutaH=/home/ghiatest/Pruebas/Hardware
 
 
 #gnome-terminal -x sh rutA1/control_de_ventanas.sh
@@ -27,12 +28,19 @@ nohup gnome-terminal -- cava
 #Fin Audio
 
 #Inicio de pruebas de Hardware
-
+#Inicio de revision de carpetas
 if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
 then
   notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
 else
-  gnome-terminal -- mkdir /home/ghiatest/Pruebas
-  gnome-terminal -- mkdir /home/ghiatest/Pruebas/Hardware
+  gnome-terminal -- mkdir $rutaP
+  gnome-terminal -- mkdir $rutaH
   notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
+fi
+#Inicio de revision de webcams
+if ls /dev/video* -lh | grep "video0" >> /dev/null ;then  nohup io.elementary.camera &
+  sleep 1  nohup glmark2 &
+#  sleep 1  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
+else  nohup glmark2 &
+#  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
