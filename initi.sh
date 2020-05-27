@@ -23,7 +23,7 @@ amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset
 notify-send "Audio" "Se reproduce en modo suffle los archivos" -i audio-speakers
 nohup gnome-terminal --title="mplayer" -- mplayer -shuffle /home/ghiatest/Música/*.mp4
 notify-send "Audio" "Se abre Cava para vizualizar el audio" -i basilisk2
-nohup gnome-terminal --title="cava"-- cava
+nohup gnome-terminal --title="cava" -- cava
 
 #Fin Audio
 
