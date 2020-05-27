@@ -39,9 +39,12 @@ else
 fi
 #Inicio de revision de webcams
 if ls /dev/video* -lh | grep "video0" >> /dev/null ;
-then  nohup io.elementary.camera &&
-      sleep 1  nohup glmark2 &
+then  nohup io.elementary.camera &
+      nohup glmark2 &
 #  sleep 1  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 else  nohup glmark2 &
 #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
+
+wmctrl -x -F -r "io.elementary.camera" -t 1
+wmctrl -x -F -r "io.elementary.camera" -e 0,300,150,600,600
