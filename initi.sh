@@ -45,6 +45,6 @@ then  nohup io.elementary.camera &
 else  nohup glmark2 &
 #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
-
-wmctrl -x -F -r "io.elementary.camera" -t 1
-wmctrl -x -F -r "io.elementary.camera" -e 0,300,150,600,600
+# notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
+wmctrl -r "io.elementary.camera" -t 5
+wmctrl -r "io.elementary.camera" -e 10,324,87,700,603
