@@ -39,12 +39,15 @@ else
 fi
 #Inicio de revision de webcams
 if ls /dev/video* -lh | grep "video0" >> /dev/null ;
-then  nohup io.elementary.camera &
-      nohup glmark2 &
+then
+nohup glmark2 &
+nohup io.elementary.camera &
+sleep 2 &&
+        wmctrl -r "io.elementary.camera" -t 5 &&
+        wmctrl -r "io.elementary.camera" -e 10,324,10,700,603
+
 #  sleep 1  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 else  nohup glmark2 &
 #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
-wmctrl -r "io.elementary.camera" -t 5
-wmctrl -r "io.elementary.camera" -e 10,324,87,700,603
