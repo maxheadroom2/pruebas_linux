@@ -21,7 +21,7 @@ rutA1=/home/ghiatest/rutinas
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
 notify-send "Audio" "Se reproduce en modo suffle los archivos" -i audio-speakers
 notify-send "Audio" "Se abre Cava para vizualizar el audio" -i basilisk2
-nohup gnome-terminal -x mplayer -shuffle /home/ghiatest/Música/*.mp4
+nohup gnome-terminal -- mplayer -shuffle /home/ghiatest/Música/*.mp4
 
 #Fin Audio
 
@@ -31,7 +31,7 @@ if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
 then
   notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
 else
-  mkdir /home/ghiatest/Pruebas
-  mkdir /home/ghiatest/Pruebas/Hardware
+  gnome-terminal -- mkdir /home/ghiatest/Pruebas
+  gnome-terminal -- mkdir /home/ghiatest/Pruebas/Hardware
   notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
 fi
