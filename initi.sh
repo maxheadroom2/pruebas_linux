@@ -52,7 +52,7 @@ else  nohup glmark2 &&
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
 sleep 2
-notify-send "Alerta" "inicia ordenamiento de ventanas con wmctrl" -i abrt
+notify-send "Alerta" "inicia ordenamiento de ventanas con wmctrl" -i minitube -u critical -t 2000
 wmctrl -r "io.elementary.camera" -t 5
 wmctrl -r "io.elementary.camera" -e 10,324,10,700,603
 wmctrl -r "cava" -t 4
