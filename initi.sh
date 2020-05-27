@@ -51,6 +51,8 @@ else  nohup glmark2 &&
 #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
+sleep 5
+notify-send "Alerta" "inicia ordenamiento de ventanas con wmctrl" -i abrt
 wmctrl -r "io.elementary.camera" -t 5
 wmctrl -r "cava" -t 4
 wmctrl -r "mplayer" -t 4
