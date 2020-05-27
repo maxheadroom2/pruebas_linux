@@ -29,8 +29,9 @@ nohup gnome-terminal -x mplayer -shuffle /home/ghiatest/Música/*.mp4
 
 if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
 then
-  notify-send "Alerta" "ya existia carpeta de pruebas" -i abrt
+  notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
 else
+  mkdir /home/ghiatest/Pruebas
   mkdir /home/ghiatest/Pruebas/Hardware
-  notify-send "Alerta" "Se crea carpeta de pruebas" -i folder-red-visiting
+  notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
 fi
