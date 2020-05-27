@@ -7,7 +7,7 @@
 # 26 de mayo 2020 autor Victor Ruben Farias Rolon
 # rev-1
 #Notas: para mandar o ejecutar un comando root sin comprometer los noveles de usuario etc se usa >| echo "passroot" | sudo -S ls /root && |< y se envia por medio de tuberias, esto normalmente no es recomendable en entornos no live
-
+#notas: para notify-send "titulo" "texto" -i nameicono -u (low, normal, critical) -t 2000 milisegundos
 # rutas generales del sistema
 
 rutaP=/home/ghiatest/Pruebas
@@ -57,3 +57,5 @@ wmctrl -r "io.elementary.camera" -t 5
 wmctrl -r "io.elementary.camera" -e 10,324,10,700,603
 wmctrl -r "cava" -t 4
 wmctrl -r "mplayer" -t 4
+wmctrl -r "glmark2" -t 4
+wmctrl -r "glmark2" -e 10,276,117,800,600
