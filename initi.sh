@@ -21,7 +21,7 @@ rutaH=/home/ghiatest/Pruebas/Hardware
 # Audio
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
 notify-send "Audio" "Se reproduce en modo suffle los archivos" -i audio-speakers
-nohup gnome-terminal -- mplayer -shuffle /home/ghiatest/Música/*.mp4
+nohup gnome-terminal --title="mplayer" -- mplayer -shuffle /home/ghiatest/Música/*.mp4
 notify-send "Audio" "Se abre Cava para vizualizar el audio" -i basilisk2
 nohup gnome-terminal -- cava
 
@@ -51,5 +51,7 @@ else  nohup glmark2 &&
 #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
-wmctrl -r "io.elementary.camera" -t 5 
+wmctrl -r "io.elementary.camera" -t 5
+wmctrl -r "cava" -t 4
+wmctrl -r "mplayer" -t 4
 wmctrl -r "io.elementary.camera" -e 10,324,10,700,603
