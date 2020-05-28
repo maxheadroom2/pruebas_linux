@@ -1,24 +1,23 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
-GTKDIALOG=gtkdialog
-export MAIN_DIALOG='
 
-<window title="My First Program" icon-name="gtk-about" resizable="true" width-request="300" height-request="310">
+MAIN_DIALOG_FILE=/tmp/ex01.gtkd
 
-<vbox>
-	<hbox space-fill="true" space-expand="true">
-		<button>
-			<label>Welcome to TecMint.com Home!</label>
-			<action>echo "Welcome to TecMint.com Home!"</action>
-		</button>
-	</hbox>
-</vbox>
+cat <<-'EOUIDFEINITION' > ${MAIN_DIALOG_FILE}
+<window>
+  <vbox>
+    <text>
+      <label>I am a window.</label>
+    </text>
+    <button ok></button>
+  </vbox>
 </window>
-'
+EOUIDFEINITION
 
-case $1 in
-	-d | --dump) echo "$MAIN_DIALOG" ;;
-	*) $GTKDIALOG --program=MAIN_DIALOG --center ;;
-
+case ${1} in
+    -d | --dump) cat ${MAIN_DIALOG_FILE} ;;
+    *) gtkdialog --center --file=${MAIN_DIALOG_FILE} ;;
 esac
-------------
+
+rm -f ${MAIN_DIALOG_FILE}
+EOSCRIPT
