@@ -1,23 +1,25 @@
-#!/bin/bash
-# -*- ENCODING: UTF-8 -*-
+#!/bin/sh
 
-MAIN_DIALOG_FILE=/tmp/ex01.gtkd
+GTKDIALOG=gtkdialog
 
-cat <<-'EOUIDFEINITION' > ${MAIN_DIALOG_FILE}
+MAIN_DIALOG='
 <window>
-  <vbox>
-    <text>
-      <label>I am a window.</label>
-    </text>
-    <button ok></button>
-  </vbox>
+    <vbox>
+        <frame Description>
+            <text>
+                <label>This is an example window.</label>
+            </text>
+        </frame>
+        <hbox>
+            <button ok></button>
+            <button cancel></button>
+        </hbox>
+    </vbox>
 </window>
-EOUIDFEINITION
+'
+export MAIN_DIALOG
 
-case ${1} in
-    -d | --dump) cat ${MAIN_DIALOG_FILE} ;;
-    *) gtkdialog --center --file=${MAIN_DIALOG_FILE} ;;
+case $1 in
+    -d | --dump) echo "$MAIN_DIALOG" ;;
+    *) $GTKDIALOG --program=MAIN_DIALOG ;;
 esac
-
-rm -f ${MAIN_DIALOG_FILE}
-EOSCRIPT
