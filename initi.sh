@@ -65,10 +65,10 @@ sleep 2s;
 for i in 1 2 3 4 5
 do
   wmctrl -s $i &
-  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 2500 &&
+  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 2700 &&
   sleep 2s
   scrot -m $rutaH"$i".png &&
-  sleep 1.8s
+  sleep 1.1s
 
 done
 wmctrl -s 0
