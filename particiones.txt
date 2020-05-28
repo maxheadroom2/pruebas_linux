@@ -1,4 +1,0 @@
-NAME   FSTYPE LABEL UUID                                 MOUNTPOINT   SIZE OWNER GROUP MODE
-sda                                                                 149.1G root  disk  brw-rw----
-├─sda1 vfat         37CB-C730                            /boot/efi    512M root  disk  brw-rw----
-└─sda2 ext4         9883a406-cd63-4068-9e4b-d7618b65dd5b /          148.6G root  disk  brw-rw----
