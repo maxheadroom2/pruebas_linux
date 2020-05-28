@@ -16,7 +16,10 @@ rutaH=/home/ghiatest/Pruebas/Hardware
 
 #gnome-terminal -x sh rutA1/control_de_ventanas.sh
 
-
+killall mplayer
+killall cava
+killall glmark2
+killall io.elementary.camera
 # Inician rutinas de pruebas
 # Audio
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
