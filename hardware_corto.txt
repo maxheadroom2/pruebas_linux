@@ -1,0 +1,67 @@
+ruta H/W         Dispositivo      Clase          Descripción
+=============================================================
+                                  system         Default string (Default string)
+/0                                bus            J4105NH-CF
+/0/0                              memory         64KiB BIOS
+/0/23                             memory         4GiB Memoria de sistema
+/0/23/0                           memory         4GiB SODIMM DDR4 Síncrono 2400 MHz (0.4 ns)
+/0/23/1                           memory         DIMM DDR2 Síncrono [vacío]
+/0/2d                             memory         224KiB L1 caché
+/0/2e                             memory         4MiB L2 caché
+/0/2f                             processor      Intel(R) Celeron(R) J4105 CPU @ 1.50GHz
+/0/100                            bridge         Intel Corporation
+/0/100/2                          display        Intel Corporation
+/0/100/e                          multimedia     Intel Corporation
+/0/100/f                          communication  Intel Corporation
+/0/100/12                         storage        Intel Corporation
+/0/100/13                         bridge         Intel Corporation
+/0/100/13.2                       bridge         Intel Corporation
+/0/100/13.2/0    eno1             network        RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+/0/100/15                         bus            Intel Corporation
+/0/100/15/0      usb1             bus            xHCI Host Controller
+/0/100/15/0/1                     bus            4-Port USB 2.0 Hub
+/0/100/15/0/1/1                   input          USB Receiver
+/0/100/15/0/1/2                   input          Smart Control
+/0/100/15/0/1/3                   multimedia     USB2.0 UVC PC Camera
+/0/100/15/0/1/4                   generic        802.11 n WLAN
+/0/100/15/0/7                     input          Smart Control
+/0/100/15/1      usb2             bus            xHCI Host Controller
+/0/100/15/1/1                     bus            4-Port USB 3.0 Hub
+/0/100/1f                         bridge         Intel Corporation
+/0/100/1f.1                       bus            Intel Corporation
+/0/1             scsi0            storage        
+/0/1/0.0.0       /dev/sda         disk           160GB SAMSUNG HD161GJ
+/0/1/0.0.0/1                      volume         511MiB Windows FAT volumen
+/0/1/0.0.0/2     /dev/sda2        volume         148GiB partición EXT4
+/1               wlxf428530c8949  network        Interfaz inalámbrica
+total 0
+-r-------- 1 root root   132 may 28 10:24 APIC
+-r-------- 1 root root    56 may 28 10:24 BGRT
+drwxr-xr-x 2 root root     0 may 28 10:24 data
+-r-------- 1 root root   114 may 28 10:24 DBG2
+-r-------- 1 root root    52 may 28 10:24 DBGP
+-r-------- 1 root root 50287 may 28 10:24 DSDT
+drwxr-xr-x 2 root root     0 may 28 10:24 dynamic
+-r-------- 1 root root   276 may 28 10:24 FACP
+-r-------- 1 root root    64 may 28 10:24 FACS
+-r-------- 1 root root   156 may 28 10:24 FIDT
+-r-------- 1 root root    68 may 28 09:15 FPDT
+-r-------- 1 root root    56 may 28 10:24 HPET
+-r-------- 1 root root    92 may 28 10:24 LPIT
+-r-------- 1 root root    60 may 28 10:24 MCFG
+-r-------- 1 root root   101 may 28 10:24 NPKT
+-r-------- 1 root root  4275 may 28 10:24 SSDT1
+-r-------- 1 root root   344 may 28 10:24 SSDT2
+-r-------- 1 root root   177 may 28 10:24 SSDT3
+-r-------- 1 root root  1237 may 28 10:24 SSDT4
+-r-------- 1 root root  1909 may 28 10:24 SSDT5
+-r-------- 1 root root   863 may 28 10:24 SSDT6
+-r-------- 1 root root   486 may 28 10:24 SSDT7
+-r-------- 1 root root 10494 may 28 10:24 SSDT8
+-r-------- 1 root root    66 may 28 10:24 UEFI
+-r-------- 1 root root   260 may 28 10:24 WDAT
+-r-------- 1 root root    40 may 28 10:24 WSMT
+NAME   FSTYPE LABEL UUID                                 MOUNTPOINT   SIZE OWNER GROUP MODE
+sda                                                                 149.1G root  disk  brw-rw----
+├─sda1 vfat         37CB-C730                            /boot/efi    512M root  disk  brw-rw----
+└─sda2 ext4         9883a406-cd63-4068-9e4b-d7618b65dd5b /          148.6G root  disk  brw-rw----
