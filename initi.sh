@@ -100,3 +100,5 @@ echo $datoDisc
 echo $datoPart
 
 zenity --question --text "Desea Continuar"
+
+zenity --text-info $datoRam  $datoPro $datoDisc $datoPart | zenity --text-info
