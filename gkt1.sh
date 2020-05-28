@@ -1,25 +1,24 @@
-#! /usr/bin/gtkdialog -e
+#!/bin/bash
 
 GTKDIALOG=gtkdialog
+export MAIN_DIALOG='
 
-MAIN_DIALOG='
-<window>
-    <vbox>
-        <frame Description>
-            <text>
-                <label>This is an example window.</label>
-            </text>
-        </frame>
-        <hbox>
-            <button ok></button>
-            <button cancel></button>
-        </hbox>
-    </vbox>
+<window title="Programa recopilador de series" icon-name="applications-engineering" resizable="true" width-request="600" height-request="310">
+
+<vbox>
+	<hbox space-fill="true" space-expand="true">
+		<button>
+			<label>Welcome to TecMint.com Home!</label>
+			<action>echo "Welcome to TecMint.com Home!"</action>
+		</button>
+	</hbox>
+</vbox>
 </window>
 '
-export MAIN_DIALOG
 
 case $1 in
-    -d | --dump) echo "$MAIN_DIALOG" ;;
-    *) $GTKDIALOG --program=MAIN_DIALOG ;;
+	-d | --dump) echo "$MAIN_DIALOG" ;;
+	*) $GTKDIALOG --program=MAIN_DIALOG --center ;;
+
 esac
+------------
