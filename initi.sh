@@ -20,9 +20,9 @@ rutaH=/home/ghiatest/Pruebas/Hardware
 # Inician rutinas de pruebas
 # Audio
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
-notify-send "Audio" "Se reproduce en modo suffle los archivos" -i audio-speakers
+notify-send "Audio" "Se reproduce en modo suffle los archivos" -i audio-speakers -t 500
 nohup gnome-terminal --title="mplayer" -- mplayer -shuffle /home/ghiatest/Música/*.mp4
-notify-send "Audio" "Se abre Cava para vizualizar el audio" -i basilisk2
+notify-send "Audio" "Se abre Cava para vizualizar el audio" -i basilisk2 -t 500
 nohup gnome-terminal --title="cava" -- cava
 
 #Fin Audio
@@ -31,11 +31,11 @@ nohup gnome-terminal --title="cava" -- cava
 #Inicio de revision de carpetas
 if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
   then
-    notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
+    notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt -t 500
   else
     gnome-terminal -- mkdir $rutaP
     gnome-terminal -- mkdir $rutaH
-    notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
+    notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting -t 500
 fi
 #Inicio de revision de webcams
 if ls /dev/video* -lh | grep "video0" >> /dev/null ;
@@ -53,7 +53,7 @@ if ls /dev/video* -lh | grep "video0" >> /dev/null ;
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
 sleep 2
-notify-send "Alerta" "inicia ordenamiento de ventanas con wmctrl" -i minitube
+notify-send "Alerta" "inicia ordenamiento de ventanas con wmctrl" -i minitube -t 500
 wmctrl -r "io.elementary.camera" -t 5
 wmctrl -r "io.elementary.camera" -e 10,324,10,700,603
 wmctrl -r "cava" -t 4
@@ -63,24 +63,24 @@ wmctrl -r "glmark2" -e 10,276,117,800,600
 
 sleep 1
 wmctrl -s 0
-notify-send "Captura" "captura de estación de trabajo 1" -i minitube
+notify-send "Captura" "captura de estación de trabajo 1" -i minitube -t 500
 
 sleep 1
 wmctrl -s 1
-notify-send "Captura" "captura de estación de trabajo 2" -i minitube
+notify-send "Captura" "captura de estación de trabajo 2" -i minitube -t 500
 
 sleep 1
 wmctrl -s 2
-notify-send "Captura" "captura de estación de trabajo 3" -i minitube
+notify-send "Captura" "captura de estación de trabajo 3" -i minitube -t 500
 
 sleep 1
 wmctrl -s 3
-notify-send "Captura" "captura de estación de trabajo 4" -i minitube
+notify-send "Captura" "captura de estación de trabajo 4" -i minitube -t 500
 
 sleep 1
 wmctrl -s 4
-notify-send "Captura" "captura de estación de trabajo 5" -i minitube
+notify-send "Captura" "captura de estación de trabajo 5" -i minitube -t 500
 
 sleep 1
 wmctrl -s 5
-notify-send "Captura" "captura de estación de trabajo 6" -i minitube
+notify-send "Captura" "captura de estación de trabajo 6" -i minitube -t 500
