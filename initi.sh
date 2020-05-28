@@ -103,4 +103,4 @@ zenity --question --text "Desea Continuar"
 
 zenity --text-info $a  | zenity --text-info
 
-echo $datoRam; echo $datoPro; echo $datoDisc; echo $datoPart  | zenity --text-info
+echo $datoRam  | zenity --text-info
