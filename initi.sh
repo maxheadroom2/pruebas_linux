@@ -65,9 +65,8 @@ wmctrl -r "glmark2" -e 10,276,117,800,600
 for i in 1 2 3 4 5
 do
   wmctrl -s $i
-  sleep .3
-  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 700
+  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 1000
   scrot -m $rutaH"$i".png
-  sleep 1.5
+  sleep 1.8
 done
 wmctrl -s 0
