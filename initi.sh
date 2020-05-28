@@ -60,7 +60,7 @@ wmctrl -r "cava" -t 4
 wmctrl -r "mplayer" -t 4
 wmctrl -r "glmark2" -t 3
 wmctrl -r "glmark2" -e 10,276,117,800,600
-
+sleep 2
 # ciclo para realizar las capturas de pantalla de las estaciones
 for i in 1 2 3 4 5
 do
