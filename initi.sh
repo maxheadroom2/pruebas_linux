@@ -10,8 +10,8 @@
 #notas: para notify-send "titulo" "texto" -i nameicono -u (low, normal, critical) -t 2000 milisegundos
 # rutas generales del sistema
 
-rutaP=/home/ghiatest/Pruebas
-rutaH=/home/ghiatest/Pruebas/Hardware
+rutaP=/home/ghiatest/Pruebas # imagenes i/o otros datos
+rutaL=/home/ghiatest/Pruebas/Logs #Logs de txt y html
 
 
 #gnome-terminal -x sh rutA1/control_de_ventanas.sh
@@ -20,6 +20,7 @@ killall mplayer
 killall cava
 killall glmark2
 killall io.elementary.camera
+rm -r $rutaP
 # Inician rutinas de pruebas
 # Audio
 amixer sset Master  100% unmute & amixer sset Speaker  100% unmute & amixer sset PCM  100% unmute & amixer sset Headphone  100% unmute
@@ -32,13 +33,13 @@ nohup gnome-terminal --title="cava" -- cava
 
 #Inicio de pruebas de Hardware
 #Inicio de revision de carpetas
-if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
+if ls  /home/ghiatest/Pruebas/ | grep Logs >> /dev/null ;
   then
     notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt -t 500
   else
     gnome-terminal -- mkdir $rutaP
-    gnome-terminal -- mkdir $rutaH
-    notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting -t 500
+    gnome-terminal -- mkdir $rutaL
+    notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Logs" -i folder-red-visiting -t 500
 fi
 #Inicio de revision de webcams
 if ls /dev/video* -lh | grep "video0" >> /dev/null ;
@@ -70,7 +71,7 @@ do
   wmctrl -s $i &
   notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 2700 &&
   sleep 2s
-  scrot -m $rutaH"$i".png &&
+  scrot -m $rutaL"$i".png &&
   sleep 1.1s
 
 done
@@ -80,19 +81,17 @@ wmctrl -s 0
 
 notify-send "Inicia LSHW y busca llave OEM"
 
-echo martha456 | sudo -S ls /root && sudo lshw -html > $rutaH/informe_de_Hardware.html
-echo martha456 | sudo -S ls /root && sudo lshw -short > $rutaH/hardware_corto.txt
-echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaH/particiones.txt
-echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaH/hardware_corto.txt
-echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaH/hardware_corto.txt
-echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaH/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo lshw -html > $rutaL/informe_de_Hardware.html
+echo martha456 | sudo -S ls /root && sudo lshw -short > $rutaL/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/particiones.txt
+echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaL/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaL/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaL/hardware_corto.txt
 
-datoRam= grep -n "Memoria" $rutaH/hardware_corto.txt
-datoPro= grep -n "processor" $rutaH/hardware_corto.txt
-datoDisc= grep -n "disk" $rutaH/hardware_corto.txt
+datoRam= grep -n "Memoria" $rutaL/hardware_corto.txt
+datoPro= grep -n "processor" $rutaL/hardware_corto.txt
+datoDisc= grep -n "disk" $rutaL/hardware_corto.txt
 
 echo $datoRam
 echo $datoPro
 echo $datoDisc
-
-notify-send "Datos PC" ""Memoria RAM" $datoRam "Procesador" $datoPro "Capacidad de disco duro" $datoDisc"
