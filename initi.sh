@@ -64,9 +64,9 @@ wmctrl -r "glmark2" -e 10,276,117,800,600
 # ciclo para realizar las capturas de pantalla de las estaciones
 for i in 1 2 3 4 5
 do
-  wmctrl -s $i
-  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 2000
-  scrot -m $rutaH"$i".png
+  wmctrl -s $i &
+  notify-send "Captura" "captura de estación de trabajo $i" -i minitube -t 2000 &&
+  scrot -m $rutaH"$i".png &&
   sleep 1.8
 done
 wmctrl -s 0
