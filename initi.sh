@@ -92,4 +92,4 @@ echo $datoRam
 echo $datoPro
 echo $datoDisc
 
-notify-send "Datos PC" "Memoria RAM "$datoRam" Procesador "$datoPro" Capacidad de disco duro "$datoDisc" " 
+notify-send "Datos PC" "Memoria RAM $datoRam Procesador $datoPro Capacidad de disco duro $datoDisc" 
