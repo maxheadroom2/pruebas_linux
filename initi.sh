@@ -101,6 +101,6 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" &
-
+wmctrl -r "Caracteristicas" -e 10,451,105,883,588
+nohup cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas"
 wmctrl -r "Caracteristicas" -e 10,451,105,883,588
