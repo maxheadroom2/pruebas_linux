@@ -30,25 +30,26 @@ nohup gnome-terminal --title="cava" -- cava
 #Inicio de pruebas de Hardware
 #Inicio de revision de carpetas
 if ls  /home/ghiatest/Pruebas/ | grep Hardware >> /dev/null ;
-then
-  notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
-else
-  gnome-terminal -- mkdir $rutaP
-  gnome-terminal -- mkdir $rutaH
-  notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
+  then
+    notify-send "Alerta" "ya existia carpeta de Pruebas /home/ghiatest/Pruebas" -i abrt
+  else
+    gnome-terminal -- mkdir $rutaP
+    gnome-terminal -- mkdir $rutaH
+    notify-send "Alerta" "Se crea carpeta de pruebas /home/ghiatest/Pruebas/Hardware" -i folder-red-visiting
 fi
 #Inicio de revision de webcams
 if ls /dev/video* -lh | grep "video0" >> /dev/null ;
-then
-nohup glmark2 &
-nohup io.elementary.camera &
-sleep 2
+  then
+  nohup glmark2 &
+  nohup io.elementary.camera &
+  sleep 2
 
+  #  sleep 1  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
+  else
+  nohup glmark2 &
+  sleep 2
 
-#  sleep 1  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
-else  nohup glmark2 &&
-      sleep 2
-#  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
+  #  nohup /home/$ruta0/$ruta1/lshw.sh & este se cambiara por otro script externo
 fi
 # notas para mover una ventana ya cambia la estructura wmctrl -r "nombre del programa" -t 5 , el nombre se saca con wmctrl -p -G -l (geometria, PID, escritorio)
 sleep 2
