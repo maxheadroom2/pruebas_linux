@@ -84,6 +84,12 @@ echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >>
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaH/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaH/hardware_corto.txt
 
-memRam= grep -n "Memoria" $rutaH/hardware_corto.txt
+datoRam= grep -n "Memoria" $rutaH/hardware_corto.txt
+datoPro= grep -n "processor" $rutaH/hardware_corto.txt
+datoDisc= grep -n "disk" $rutaH/hardware_corto.txt
 
-echo $memRam
+echo $datoRam
+echo $datoPro
+echo $datoDisc
+
+notify-send "Datos PC" "Memoria RAM "$datoRam" Procesador "$datoPro" Capacidad de disco duro "$datoDisc" " 
