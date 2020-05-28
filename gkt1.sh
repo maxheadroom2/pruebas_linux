@@ -1,4 +1,5 @@
 #!/bin/bash
+# -*- ENCODING: UTF-8 -*-
 
 GTKDIALOG=gtkdialog
 export MAIN_DIALOG='
