@@ -101,7 +101,7 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup gnome-terminal  --title="terminal_1" -- sh $rutaL/caract.sh
+nohup gnome-terminal  --title="terminal_1" -- sh /home/ghiatest/git/caract.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
 wmctrl -r "terminal_1" -e 10,451,105,883,588
 wmctrl -r "caract" -e 10,451,105,883,588
