@@ -72,3 +72,14 @@ do
 
 done
 wmctrl -s 0
+
+# Fin de ciclo de capturas
+
+notify-send "Inicia LSHW y busca llave OEM"
+
+echo martha456 | sudo -S ls /root && sudo lshw -html > $rutaH/informe_de_Hardware.html
+echo martha456 | sudo -S ls /root && sudo lshw -short > $rutaH/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaH/particiones.txt
+echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaH/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaH/hardware_corto.txt
+echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaH/hardware_corto.txt
