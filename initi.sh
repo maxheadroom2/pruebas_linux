@@ -90,7 +90,7 @@ echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $ru
 echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaL/hardware_corto.txt
 
 datoRam= grep -n "Memoria" $rutaL/hardware_corto.txt | awk '{print $3}'
-datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk '{print $3}'
+datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
 datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk '{print $4}'
 
 echo $datoRam
