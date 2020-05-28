@@ -87,20 +87,18 @@ echo martha456 | sudo -S ls /root && sudo lshw -short > $rutaL/hardware_corto.tx
 echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/particiones.txt
 echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaL/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaL/hardware_corto.txt
-echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaL/listado_de_disco_particiones.txt
+echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/listado_de_disco_particiones.txt
 
-datoRam= grep -n "Memoria" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
-datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
-datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
-datoPart= grep -n "disk" $rutaL/listado_de_disco_particiones.txt
+datoRam= grep -n "Memoria" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'    > $rutaL/perfil.txt
+datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }' >> $rutaL/perfil.txt
+datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'     >> $rutaL/perfil.txt
+datoPart= grep -n "disk" $rutaL/listado_de_disco_particiones.txt                                                              >> $rutaL/perfil.txt
 
 echo $datoRam
 echo $datoPro
 echo $datoDisc
 echo $datoPart
 
-zenity --question --text "Desea Continuar"
+#zenity --question --text "Desea Continuar"
 
-zenity --text-info $a  | zenity --text-info
-
-echo $datoRam  | zenity --text-info
+cat $rutaL/perfil.txt  | zenity --text-info
