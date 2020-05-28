@@ -21,6 +21,8 @@ killall mplayer
 killall cava
 killall glmark2
 killall io.elementary.camera
+killall caract
+killall terminal_1
 rm -r $rutaP
 # Inician rutinas de pruebas
 # Audio
