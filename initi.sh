@@ -16,6 +16,7 @@ rutaL=/home/ghiatest/Pruebas/Logs #Logs de txt y html
 
 #gnome-terminal -x sh rutA1/control_de_ventanas.sh
 
+# Seccion para matar procesos y limpiar directorios y archivos, esto se puede dejar o anular
 killall mplayer
 killall cava
 killall glmark2
@@ -95,3 +96,5 @@ datoDisc= grep -n "disk" $rutaL/hardware_corto.txt
 echo $datoRam
 echo $datoPro
 echo $datoDisc
+
+zenity --question --text "Desea Continuar"
