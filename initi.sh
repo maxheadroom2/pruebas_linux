@@ -92,7 +92,7 @@ echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/listado_de_disco_pa
 datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'  > $rutaL/perfil.txt
 datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }' >> $rutaL/perfil.txt
 datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'     >> $rutaL/perfil.txt
-datoPart= grep -n "disk" $rutaL/listado_de_disco_particiones.txt                                                              >> $rutaL/perfil.txt
+#datoPart= grep -n "disk" $rutaL/listado_de_disco_particiones.txt                                                              >> $rutaL/perfil.txt se omite para añadir en otra sección
 
 echo $datoRam
 echo $datoPro
@@ -101,4 +101,6 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-cat $rutaL/perfil.txt  | zenity --text-info
+cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" &
+
+wmctrl -r "Caracteristicas" -e 10,451,105,883,588
