@@ -84,9 +84,6 @@ echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >>
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaH/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaH/hardware_corto.txt
 
-memoriaRam=grep -n "Memoria" $rutaH/hardware_corto.txt
+memRam= grep -n "Memoria" $rutaH/hardware_corto.txt
 
-zenity --list \
-  title="Informacion del equipo de computo" \
-  column="Descripcio" \
-  $memoriaRam" \
+echo $memRam
