@@ -84,9 +84,9 @@ echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >>
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaH/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo lsblk -fm >> $rutaH/hardware_corto.txt
 
+memoriaRam=grep -n "Memoria" $rutaH/hardware_corto.txt
 
-$ blog=$(zenity --list --text "Selecciona tus blogs..."
---title "Hipertextual" --checklist  --column "Blog" --column "URL"
-FALSE http://alt1040.com
-FALSE http://bitelia.com
-FALSE http://motorfull.com | tr "|" " ")
+zenity --list \
+  title="Informacion del equipo de computo" \
+  column="Descripcio" \
+  $memoriaRam" \
