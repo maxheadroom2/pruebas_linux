@@ -2,6 +2,8 @@
 # -*- ENCODING: UTF-8 -*-
 
 fnUpdateFieldsSBR() {
+
+    a1=("Intel")
     echo "3:${title:-MR}"
     echo "4:${lastName:-Smith}"
     echo "5:${gender:-Male}"
