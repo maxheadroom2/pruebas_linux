@@ -1,0 +1,79 @@
+ruta H/W        Dispositivo  Clase          Descripción
+========================================================
+                             system         Modelo GHIA (Default string)
+/0                           bus            H110M-H-CF
+/0/0                         memory         64KiB BIOS
+/0/3d                        memory         4GiB Memoria de sistema
+/0/3d/0                      memory         4GiB DIMM Síncrono 2133 MHz (0.5 ns)
+/0/3d/1                      memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/3d/2                      memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/3d/3                      memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/43                        memory         128KiB L1 caché
+/0/44                        memory         512KiB L2 caché
+/0/45                        memory         3MiB L3 caché
+/0/46                        processor      Intel(R) Pentium(R) CPU G4400 @ 3.30GHz
+/0/100                       bridge         Sky Lake Host Bridge/DRAM Registers
+/0/100/2                     display        Intel Corporation
+/0/100/14                    bus            Sunrise Point-H USB 3.0 xHCI Controller
+/0/100/16                    communication  Sunrise Point-H CSME HECI #1
+/0/100/17                    storage        Sunrise Point-H SATA controller [AHCI mode]
+/0/100/1c                    bridge         Sunrise Point-H PCI Express Root Port #5
+/0/100/1c/0     eth0         network        RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+/0/100/1c.5                  bridge         Sunrise Point-H PCI Express Root Port #6
+/0/100/1c.6                  bridge         Sunrise Point-H PCI Express Root Port #7
+/0/100/1c.7                  bridge         Sunrise Point-H PCI Express Root Port #8
+/0/100/1d                    bridge         Sunrise Point-H PCI Express Root Port #9
+/0/100/1d.1                  bridge         Sunrise Point-H PCI Express Root Port #10
+/0/100/1f                    bridge         Sunrise Point-H LPC Controller
+/0/100/1f.2                  memory         Memory controller
+/0/100/1f.3                  multimedia     Sunrise Point-H HD Audio
+/0/100/1f.4                  bus            Sunrise Point-H SMBus
+/0/1            scsi0        storage        
+/0/1/0.0.0      /dev/sda     disk           500GB WDC WD5000AZLX-0
+/0/1/0.0.0/1    /dev/sda1    volume         61MiB Windows FAT volumen
+/0/1/0.0.0/2    /dev/sda2    volume         1023KiB BIOS Boot partition
+/0/1/0.0.0/3    /dev/sda3    volume         20GiB partición EXT4
+/0/2            scsi4        storage        
+/0/2/0.0.0      /dev/sdb     disk           15GB Cruzer Glide 3.0
+/0/2/0.0.0/0    /dev/sdb     disk           15GB 
+/0/2/0.0.0/0/1  /dev/sdb1    volume         14GiB Windows FAT volumen
+/0/3            scsi5        storage        
+/0/3/0.0.0      /dev/sdc     disk           SCSI Disk
+/1                           power          To Be Filled By O.E.M.
+total 0
+-r-------- 1 root root    104 Aug  8 07:15 APIC
+-r-------- 1 root root     84 Aug  8 07:15 DBG2
+-r-------- 1 root root     52 Aug  8 07:15 DBGP
+-r-------- 1 root root    168 Aug  8 07:15 DMAR
+-r-------- 1 root root 162245 Aug  8 07:15 DSDT
+drwxr-xr-x 2 root root      0 Aug  8 07:15 dynamic
+-r-------- 1 root root    276 Aug  8 07:15 FACP
+-r-------- 1 root root     64 Aug  8 07:15 FACS
+-r-------- 1 root root    156 Aug  8 07:15 FIDT
+-r-------- 1 root root     68 Aug  8 07:15 FPDT
+-r-------- 1 root root     56 Aug  8 07:15 HPET
+-r-------- 1 root root    148 Aug  8 07:15 LPIT
+-r-------- 1 root root     60 Aug  8 07:15 MCFG
+-r-------- 1 root root  12628 Aug  8 07:15 SSDT1
+-r-------- 1 root root   9540 Aug  8 07:15 SSDT2
+-r-------- 1 root root   3643 Aug  8 07:15 SSDT3
+-r-------- 1 root root   2303 Aug  8 07:15 SSDT4
+-r-------- 1 root root   3806 Aug  8 07:15 SSDT5
+-r-------- 1 root root    671 Aug  8 07:15 SSDT6
+-r-------- 1 root root  12290 Aug  8 07:15 SSDT7
+-r-------- 1 root root     66 Aug  8 07:15 UEFI
+-r-------- 1 root root     40 Aug  8 07:15 WSMT
+NAME   FSTYPE   LABEL  MOUNTPOINT NAME     SIZE OWNER GROUP MODE
+sda                               sda    465.8G root  disk  brw-rw----
+├─sda1 vfat                       ├─sda1    62M root  disk  brw-rw----
+├─sda2                            ├─sda2     1M root  disk  brw-rw----
+└─sda3 ext4     ostree            └─sda3  20.1G root  disk  brw-rw----
+sdb                               sdb     14.5G root  disk  brw-rw----
+└─sdb1 vfat            /cdrom     └─sdb1  14.5G root  disk  brw-rw----
+loop0  squashfs        /rofs      loop0    3.1G root  disk  brw-rw----
+smartctl 6.2 2013-07-26 r3841 [x86_64-linux-3.19.0-51-generic] (local build)
+Copyright (C) 2002-13, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+

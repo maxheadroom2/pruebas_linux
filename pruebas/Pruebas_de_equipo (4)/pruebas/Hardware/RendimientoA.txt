@@ -1,0 +1,4 @@
+
+/dev/sda:
+ Timing cached reads:   13888 MB in  2.00 seconds = 6948.27 MB/sec
+ Timing buffered disk reads: 492 MB in  3.01 seconds = 163.40 MB/sec

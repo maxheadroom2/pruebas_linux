@@ -1,44 +1,56 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 
+title="Hola"
+
 fnUpdateFieldsSBR() {
+    #para linux
+    rutaP=/home/ghiatest/Pruebas # imagenes i/o otros datos
+    rutaL=/home/ghiatest/Pruebas/Logs #Logs de txt y html
+    #rutaL=/mnt/c/Users/sinte/github/pruebas_linux
 
-    a1=("Intel")
-    echo "3:${title:-MR}"
-    echo "4:${lastName:-Smith}"
-    echo "5:${gender:-Male}"
-    echo "6:${ssn:-123456789}"
+    datoRam=$(grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }')
+    datoPro=$(grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
+    datoDisc=$(grep -n "/0/1/0.0.0" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
+    datoPart=$(cat $rutaL/particiones.txt)
+    echo "1:${numSerie:-343434}"
+    echo "3:${datoMod:-PCGHIA-1533}"
+    echo "3:${datoPro:- }"
+    echo "4:${datoRam:- }"
+    echo "5:${datoDisc:- }"
+    echo "6:${datoPart:- }"
 
-    echo "11:${firstName:-John}"
-    echo "12:${suffix:-III}"
-    echo "13:${dob:-10/10/1978}"
+    echo "11:${nameTec:-ERK}"
+    echo "12:${modelMoth:-III}"
+    echo "13:${verMoth:-10/10/1978}"
 }
 export -f fnUpdateFieldsSBR
 
 yad \
 --center \
---title="Find Patient by EUID" \
---text="<span size=\"xx-large\">Find Patient Details by EUID</span>\n" \
+--title="Caracteristicas" \
+--text="<span size=\"xx-large\">Detalles de Equipo de Computo</span>\n" \
 --form \
---width=550 \
+--width=1000 \
 --borders=5 \
 --columns=2 \
 --date-format="%m/%d/%Y" \
 --align=right \
---field="Enterprise Unique ID" "${USAPatXEUIDX:-0001234567}" \
---field="Demographics:LBL" "" \
---field="Title:RO" "" \
---field="Last Name:RO" "" \
---field="Sex:RO" "" \
---field="Social Security Number:RO" "" \
+--field="Numero de Serie:RO" "" \
+--field="Modelo:RO" "" \
+--field="Procesador:RO" "" \
+--field="Memoria Ram total:RO" "" \
+--field="Disco duro:RO" "" \
+--field="Particiones:TXT"  "${datoPart}" \
 --field="Options:LBL" "" \
 --field="Show XML Request?:CHK" "FALSE" \
  \
---field "  Search!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
+--field "  Ver Informacion PC!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
---field="First Name:RO" "" \
---field="Suffix:RO" "" \
---field="Date of Birth:RO" "" \
+--field="Tenico:RO" "" \
+--field="Motherboard:RO" "" \
+--field="Ver. Motherboard:RO" "" \
+--field="Version del BIOS:RO" "" \
 --field=".:LBL" "." \
 --field=":LBL" "" \
 --field="Show XML Response?:CHK" "FALSE" \

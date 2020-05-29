@@ -1,0 +1,8 @@
+NAME   FSTYPE   LABEL  MOUNTPOINT NAME     SIZE OWNER GROUP MODE
+sda                               sda    465.8G root  disk  brw-rw----
+├─sda1 vfat                       ├─sda1    62M root  disk  brw-rw----
+├─sda2                            ├─sda2     1M root  disk  brw-rw----
+└─sda3 ext4     ostree            └─sda3  20.1G root  disk  brw-rw----
+sdb                               sdb     14.5G root  disk  brw-rw----
+└─sdb1 vfat            /cdrom     └─sdb1  14.5G root  disk  brw-rw----
+loop0  squashfs        /rofs      loop0    3.1G root  disk  brw-rw----

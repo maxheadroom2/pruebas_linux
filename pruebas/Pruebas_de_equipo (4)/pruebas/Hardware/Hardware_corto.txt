@@ -1,0 +1,79 @@
+ruta H/W      Dispositivo  Clase          Descripción
+======================================================
+                           system         B250M-DS3H (To be filled by OEM)
+/0                         bus            B250M-DS3H-CF
+/0/0                       memory         64KiB BIOS
+/0/3d                      memory         8GiB Memoria de sistema
+/0/3d/0                    memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/3d/1                    memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/3d/2                    memory         Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241)Project-Id-Version: lshwReport-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>POT-Creation-Date: 2009-10-08 14:02+0200PO-Revision-Date: 2012-03-14 06:38+0000Last-Translator: Paco Molinero <paco@byasl.com>Language-Team: Spanish <es@li.org>MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2014-11-10 11:11+0000X-Generator: Launchpad (build 17241) [vacío]
+/0/3d/3                    memory         8GiB DIMM Síncrono 2133 MHz (0.5 ns)
+/0/43                      memory         256KiB L1 caché
+/0/44                      memory         1MiB L2 caché
+/0/45                      memory         6MiB L3 caché
+/0/46                      processor      Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+/0/100                     bridge         Intel Corporation
+/0/100/2                   display        Intel Corporation
+/0/100/8                   generic        Sky Lake Gaussian Mixture Model
+/0/100/14                  bus            Intel Corporation
+/0/100/16                  communication  Intel Corporation
+/0/100/17                  storage        Intel Corporation
+/0/100/1b                  bridge         Intel Corporation
+/0/100/1c                  bridge         Intel Corporation
+/0/100/1c/0   eth0         network        RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+/0/100/1c.5                bridge         Intel Corporation
+/0/100/1c.6                bridge         Intel Corporation
+/0/100/1c.7                bridge         Intel Corporation
+/0/100/1d                  bridge         Intel Corporation
+/0/100/1d.1                bridge         Intel Corporation
+/0/100/1d.2                bridge         Intel Corporation
+/0/100/1d.3                bridge         Intel Corporation
+/0/100/1f                  bridge         Intel Corporation
+/0/100/1f.2                memory         Memory controller
+/0/100/1f.3                multimedia     Intel Corporation
+/0/100/1f.4                bus            Intel Corporation
+/0/1          scsi0        storage        
+/0/1/0.0.0    /dev/sda     disk           1TB WDC WD10EZEX-22M
+/0/2          scsi1        storage        
+/0/2/0.0.0    /dev/cdrom   disk           iHAS124   F
+/0/3          scsi6        storage        
+/0/3/0.0.0    /dev/sdb     disk           15GB SCSI Disk
+/0/3/0.0.0/1  /dev/sdb1    volume         14GiB Windows FAT volumen
+/0/4          scsi7        storage        
+/0/4/0.0.0    /dev/sdc     disk           SCSI Disk
+/1                         power          To Be Filled By O.E.M.
+total 0
+-r-------- 1 root root    132 Jun  6 13:03 APIC
+-r-------- 1 root root     84 Jun  6 13:03 DBG2
+-r-------- 1 root root     52 Jun  6 13:03 DBGP
+-r-------- 1 root root    168 Jun  6 13:03 DMAR
+-r-------- 1 root root 157733 Jun  6 13:03 DSDT
+drwxr-xr-x 2 root root      0 Jun  6 13:03 dynamic
+-r-------- 1 root root    276 Jun  6 13:03 FACP
+-r-------- 1 root root     64 Jun  6 13:03 FACS
+-r-------- 1 root root    156 Jun  6 13:03 FIDT
+-r-------- 1 root root     68 Jun  6 13:03 FPDT
+-r-------- 1 root root     56 Jun  6 13:03 HPET
+-r-------- 1 root root    148 Jun  6 13:03 LPIT
+-r-------- 1 root root     60 Jun  6 13:03 MCFG
+-r-------- 1 root root  12628 Jun  6 13:03 SSDT1
+-r-------- 1 root root   9540 Jun  6 13:03 SSDT2
+-r-------- 1 root root   3643 Jun  6 13:03 SSDT3
+-r-------- 1 root root  10967 Jun  6 13:03 SSDT4
+-r-------- 1 root root   3806 Jun  6 13:03 SSDT5
+-r-------- 1 root root    671 Jun  6 13:03 SSDT6
+-r-------- 1 root root  12290 Jun  6 13:03 SSDT7
+-r-------- 1 root root     66 Jun  6 13:03 UEFI
+-r-------- 1 root root     40 Jun  6 13:03 WSMT
+NAME   FSTYPE   LABEL       MOUNTPOINT NAME     SIZE OWNER GROUP MODE
+sda                                    sda    931.5G root  disk  brw-rw----
+sdb                                    sdb     14.5G root  disk  brw-rw----
+└─sdb1 vfat     CUSTOM LIVE /cdrom     └─sdb1  14.5G root  disk  brw-rw----
+sr0                                    sr0     1024M root  cdrom brw-rw----
+loop0  squashfs             /rofs      loop0    3.1G root  disk  brw-rw----
+smartctl 6.2 2013-07-26 r3841 [x86_64-linux-3.19.0-51-generic] (local build)
+Copyright (C) 2002-13, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+

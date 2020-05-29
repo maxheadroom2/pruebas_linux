@@ -1,0 +1,6 @@
+NAME   FSTYPE   LABEL       MOUNTPOINT NAME     SIZE OWNER GROUP MODE
+sda                                    sda    931.5G root  disk  brw-rw----
+sdb                                    sdb     14.5G root  disk  brw-rw----
+└─sdb1 vfat     CUSTOM LIVE /cdrom     └─sdb1  14.5G root  disk  brw-rw----
+sr0                                    sr0     1024M root  cdrom brw-rw----
+loop0  squashfs             /rofs      loop0    3.1G root  disk  brw-rw----
