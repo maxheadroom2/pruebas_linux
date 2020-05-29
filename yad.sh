@@ -11,8 +11,8 @@ fnUpdateFieldsSBR() {
 
     #datoPro=$(echo "Intel")
 
-    echo "1:${datoPr:$datoPro}"
-    echo "3:${datoPro:-$datoPro}"
+  #  echo "1:${datoPr:$datoPro}"
+  #  echo "3:${datoPro:-$datoPro}"
     echo "5:${lastName:-Smith}"
     echo "4:${gender:-Male}"
     echo "6:${ssn:-123456789}"
