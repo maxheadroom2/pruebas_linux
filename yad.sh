@@ -1,7 +1,14 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 
+echo "1:${title:-MR}"
+echo "2:${lastName:-Smith}"
+echo "3:${gender:-Male}"
+echo "6:${ssn:-123456789}"
 
+echo "11:${firstName:-John}"
+echo "12:${suffix:-III}"
+echo "13:${dob:-10/10/1978}"
 
 yad \
 --center \
@@ -14,7 +21,7 @@ yad \
 --date-format="%m/%d/%Y" \
 --align=right \
 --field="Informacion de Hardware:LBL" "" \
---field="Modelo:RO"prueba \
+--field="Modelo:RO"" """ \
 --field="Serie:RO" "" \
 --field="Disco Duro:RO" "" \
 --field="Memoria Ram:RO" "" \
