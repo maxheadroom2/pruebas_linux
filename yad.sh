@@ -13,8 +13,8 @@ yad \
 --columns=2 \
 --date-format="%m/%d/%Y" \
 --align=right \
---field="Informacion de Hardware:LBL" ok "" \
---field="Modelo:RO" "" \
+--field="Informacion de Hardware:LBL" "" \
+--field="Modelo:RO"prueba \
 --field="Serie:RO" "" \
 --field="Disco Duro:RO" "" \
 --field="Memoria Ram:RO" "" \
