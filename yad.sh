@@ -2,6 +2,7 @@
 # -*- ENCODING: UTF-8 -*-
 
 fnUpdateFieldsSBR() {
+    echo "1:${datoPro:-10/10/1978}"
     echo "3:${title:-MR}"
     echo "4:${lastName:-Smith}"
     echo "5:${gender:-Male}"
@@ -16,15 +17,15 @@ export -f fnUpdateFieldsSBR
 
 yad \
 --center \
---title="Find Patient by EUID" \
---text="<span size=\"xx-large\">Find Patient Details by EUID</span>\n" \
+--title="Analisis" \
+--text="<span size=\"xx-large\">Caracteristicas de Equipo de Computo</span>\n" \
 --form \
---width=550 \
+--width=750 \
 --borders=5 \
 --columns=2 \
 --date-format="%m/%d/%Y" \
 --align=right \
---field="Enterprise Unique ID" "${USAPatXEUIDX:-0001234567}" \
+--field="Enterprise Unique ID" "${datoPro}" \
 --field="Demographics:LBL" "" \
 --field="Title:RO" "" \
 --field="Last Name:RO" "" \
@@ -33,7 +34,7 @@ yad \
 --field="Options:LBL" "" \
 --field="Show XML Request?:CHK" "FALSE" \
  \
---field "  s!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
+--field "  Ver resultados!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
 --field="First Name:RO" "" \
 --field="Suffix:RO" "" \
