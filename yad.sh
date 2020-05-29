@@ -2,39 +2,28 @@
 # -*- ENCODING: UTF-8 -*-
 
 fnUpdateFieldsSBR() {
-
-    rutaP=/home/ghiatest/Pruebas # imagenes i/o otros datos
-    rutaL=/home/ghiatest/Pruebas/Logs #Logs de txt y html
-    datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'
-    datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
-    datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
-
-    #datoPro=$(echo "Intel")
-
-  #  echo "1:${datoPr:$datoPro}"
-  #  echo "3:${datoPro:-$datoPro}"
-    echo "5:${lastName:-Smith}"
-    echo "4:${gender:-Male}"
+    echo "3:${title:-MR}"
+    echo "4:${lastName:-Smith}"
+    echo "5:${gender:-Male}"
     echo "6:${ssn:-123456789}"
 
     echo "11:${firstName:-John}"
     echo "12:${suffix:-III}"
     echo "13:${dob:-10/10/1978}"
-    notify-send "Inicia LSHW y busca llave OEM"
 }
 export -f fnUpdateFieldsSBR
 
 yad \
 --center \
---title="Analisis" \
---text="<span size=\"xx-large\">Caracteristicas de Equipo de Computo</span>\n" \
+--title="Find Patient by EUID" \
+--text="<span size=\"xx-large\">Find Patient Details by EUID</span>\n" \
 --form \
---width=750 \
+--width=550 \
 --borders=5 \
 --columns=2 \
 --date-format="%m/%d/%Y" \
 --align=right \
---field="Processador" "" "$datoPro" \
+--field="Enterprise Unique ID" "${USAPatXEUIDX:-0001234567}" \
 --field="Demographics:LBL" "" \
 --field="Title:RO" "" \
 --field="Last Name:RO" "" \
@@ -43,7 +32,7 @@ yad \
 --field="Options:LBL" "" \
 --field="Show XML Request?:CHK" "FALSE" \
  \
---field "  Ver resultados!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
+--field "  Search!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
 --field="First Name:RO" "" \
 --field="Suffix:RO" "" \
