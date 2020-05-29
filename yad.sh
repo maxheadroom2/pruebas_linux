@@ -2,7 +2,7 @@
 # -*- ENCODING: UTF-8 -*-
 
 fnUpdateFieldsSBR() {
-    echo "1:${title:-MR}"
+    echo "2:${modelo:-MR}"
     echo "4:${lastName:-Smith}"
     echo "5:${gender:-Male}"
     echo "6:${ssn:-123456789}"
@@ -10,6 +10,7 @@ fnUpdateFieldsSBR() {
     echo "11:${firstName:-John}"
     echo "12:${suffix:-III}"
     echo "13:${dob:-10/10/1978}"
+    notify-send "ok"
 }
 export -f fnUpdateFieldsSBR
 
