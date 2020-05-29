@@ -1,16 +1,5 @@
 #!/bin/bash
 
-fnUpdateFieldsSBR() {
-    echo "3:${title:-MR}"
-    echo "4:${lastName:-Smith}"
-    echo "5:${gender:-Male}"
-    echo "6:${ssn:-123456789}"
-
-    echo "11:${firstName:-John}"
-    echo "12:${suffix:-III}"
-    echo "13:${dob:-10/10/1978}"
-}
-export -f fnUpdateFieldsSBR
 
 yad \
 --center \
@@ -42,5 +31,3 @@ yad \
  \
 --dialog-sep \
 --button="Quit!gtk-quit:0"
-
-EODECK
