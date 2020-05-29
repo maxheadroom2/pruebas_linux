@@ -9,9 +9,8 @@ fnUpdateFieldsSBR() {
     datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
     datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
 
-    echo $datoPro
-    echo "1:${datoPro:-$datoPro}"
-    echo "3:${title:-MR}"
+    echo "1:${datoPro:-ok}"
+    echo "3:${datoPro:$datoPro}"
     echo "4:${lastName:-Smith}"
     echo "5:${gender:-Male}"
     echo "6:${ssn:-123456789}"
