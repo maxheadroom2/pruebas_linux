@@ -6,12 +6,12 @@ fnUpdateFieldsSBR() {
     rutaP=/home/ghiatest/Pruebas # imagenes i/o otros datos
     rutaL=/home/ghiatest/Pruebas/Logs #Logs de txt y html
     datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'
-    #datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
+    datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
     datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
 
-    datoPro=$(echo "Intel")
+    #datoPro=$(echo "Intel")
 
-    #echo "1:${datoPro:"'$datoPro'"}"
+    echo "1:${datoPro:"'$datoPro'"}"
     echo "3:${datoPro:-$datoPro}"
     echo "5:${lastName:-Smith}"
     echo "4:${gender:-Male}"
