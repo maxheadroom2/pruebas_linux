@@ -1,14 +1,17 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 
-echo "1:${title:-MR}"
-echo "2:${lastName:-Smith}"
-echo "3:${gender:-Male}"
-echo "6:${ssn:-123456789}"
+fnUpdateFieldsSBR() {
+    echo "1:${title:-MR}"
+    echo "4:${lastName:-Smith}"
+    echo "5:${gender:-Male}"
+    echo "6:${ssn:-123456789}"
 
-echo "11:${firstName:-John}"
-echo "12:${suffix:-III}"
-echo "13:${dob:-10/10/1978}"
+    echo "11:${firstName:-John}"
+    echo "12:${suffix:-III}"
+    echo "13:${dob:-10/10/1978}"
+}
+export -f fnUpdateFieldsSBR
 
 yad \
 --center \
@@ -27,6 +30,7 @@ yad \
 --field="Memoria Ram:RO" "" \
 --field="Detalles particiones:LBL" "" \
  \
+--field "  Actualizar!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
 --field="Procesador:RO" "" \
 --field="Tecnico:RO" "" \
@@ -36,4 +40,3 @@ yad \
 
  \
 --dialog-sep \
---button="Quit!gtk-quit:0"
