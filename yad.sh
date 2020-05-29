@@ -15,8 +15,8 @@ export -f fnUpdateFieldsSBR
 
 yad \
 --center \
---title="Find Patient by EUID" \
---text="<span size=\"xx-large\">Find Patient Details by EUID</span>\n" \
+--title="Caracteristicas" \
+--text="<span size=\"xx-large\">Caracteristicas Equipo de Computo</span>\n" \
 --form \
 --width=550 \
 --borders=5 \
@@ -24,19 +24,19 @@ yad \
 --date-format="%m/%d/%Y" \
 --align=right \
 --field="Enterprise Unique ID" "${USAPatXEUIDX:-0001234567}" \
---field="Demographics:LBL" "" \
---field="Title:RO" "" \
---field="Last Name:RO" "" \
---field="Sex:RO" "" \
---field="Social Security Number:RO" "" \
+--field="Informacion de Hardware:LBL" "" \
+--field="Modelo:RO" "" \
+--field="Serie:RO" "" \
+--field="Disco Duro:RO" "" \
+--field="Memoria Ram:RO" "" \
 --field="Options:LBL" "" \
 --field="Show XML Request?:CHK" "FALSE" \
  \
 --field "  Search!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
---field="First Name:RO" "" \
---field="Suffix:RO" "" \
---field="Date of Birth:RO" "" \
+--field="Procesador:RO" "" \
+--field="Tecnico:RO" "" \
+--field="Modelo de Motherboard:RO" "" \
 --field=".:LBL" "." \
 --field=":LBL" "" \
 --field="Show XML Response?:CHK" "FALSE" \
