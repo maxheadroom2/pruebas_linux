@@ -2,7 +2,11 @@
 # -*- ENCODING: UTF-8 -*-
 
 fnUpdateFieldsSBR() {
-    echo "1:${datoPro:-10/10/1978}"
+
+    datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'
+    datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }' >> $rutaL/perfil.txt
+    datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'     >> $rutaL/perfil.txt
+    echo "1:${datoPro}"
     echo "3:${title:-MR}"
     echo "4:${lastName:-Smith}"
     echo "5:${gender:-Male}"
