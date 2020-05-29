@@ -33,7 +33,7 @@ yad \
 --field="Options:LBL" "" \
 --field="Show XML Request?:CHK" "FALSE" \
  \
---field "  Search!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
+--field "  s!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
 --field=":LBL" "" \
 --field="First Name:RO" "" \
 --field="Suffix:RO" "" \
