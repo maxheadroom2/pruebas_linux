@@ -9,9 +9,9 @@ fnUpdateFieldsSBR() {
     #datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
     datoDisc= grep -n "disk" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }'
 
-    datoPro="Intel"
+    datoPro=$(echo "Intel")
 
-    echo "1:${datoPro:"'$datoPro'"}"
+    #echo "1:${datoPro:"'$datoPro'"}"
     echo "3:${datoPro:-$datoPro}"
     echo "5:${lastName:-Smith}"
     echo "4:${gender:-Male}"
@@ -34,7 +34,7 @@ yad \
 --columns=2 \
 --date-format="%m/%d/%Y" \
 --align=right \
---field="Processador" "${datoPro:"'$datoPro'"}" \
+--field="Processador" "" "$datoPro" \
 --field="Demographics:LBL" "" \
 --field="Title:RO" "" \
 --field="Last Name:RO" "" \
