@@ -1,34 +1,46 @@
-#! /bin/bash
+#!/bin/bash
 
-action=$(yad --width 300 --entry --title "System Logout" \
-    --image=gnome-shutdown \
-    --button="Switch User:2" \
-    --button="gtk-ok:0" --button="gtk-close:1" \
-    --text "Choose action:" \
-    --entry-text \
-    "Power Off" "Reboot" "Suspend" "Logout")
-ret=$?
+fnUpdateFieldsSBR() {
+    echo "3:${title:-MR}"
+    echo "4:${lastName:-Smith}"
+    echo "5:${gender:-Male}"
+    echo "6:${ssn:-123456789}"
 
-[[ $ret -eq 1 ]] && exit 0
+    echo "11:${firstName:-John}"
+    echo "12:${suffix:-III}"
+    echo "13:${dob:-10/10/1978}"
+}
+export -f fnUpdateFieldsSBR
 
-if [[ $ret -eq 2 ]]; then
-    gdmflexiserver --startnew &
-    exit 0
-fi
+yad \
+--center \
+--title="Find Patient by EUID" \
+--text="<span size=\"xx-large\">Find Patient Details by EUID</span>\n" \
+--form \
+--width=550 \
+--borders=5 \
+--columns=2 \
+--date-format="%m/%d/%Y" \
+--align=right \
+--field="Enterprise Unique ID" "${USAPatXEUIDX:-0001234567}" \
+--field="Demographics:LBL" "" \
+--field="Title:RO" "" \
+--field="Last Name:RO" "" \
+--field="Sex:RO" "" \
+--field="Social Security Number:RO" "" \
+--field="Options:LBL" "" \
+--field="Show XML Request?:CHK" "FALSE" \
+ \
+--field "  Search!gtk-find:FBTN" "@bash -c \"fnUpdateFieldsSBR \"%16\" \"%8\" \"%1\"  \" " \
+--field=":LBL" "" \
+--field="First Name:RO" "" \
+--field="Suffix:RO" "" \
+--field="Date of Birth:RO" "" \
+--field=".:LBL" "." \
+--field=":LBL" "" \
+--field="Show XML Response?:CHK" "FALSE" \
+ \
+--dialog-sep \
+--button="Quit!gtk-quit:0"
 
-case $action in
-    Power*) cmd="sudo /sbin/poweroff" ;;
-    Reboot*) cmd="sudo /sbin/reboot" ;;
-    Suspend*) cmd="sudo /bin/sh -c 'echo disk > /sys/power/state'" ;;
-    Logout*)
-    case $(wmctrl -m | grep Name) in
-        *Openbox) cmd="openbox --exit" ;;
-        *FVWM) cmd="FvwmCommand Quit" ;;
-            *Metacity) cmd="gnome-save-session --kill" ;;
-        *) exit 1 ;;
-    esac
-    ;;
-    *) exit 1 ;;
-esac
-
-eval exec $cmd
+EODECK
