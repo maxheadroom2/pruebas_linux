@@ -90,7 +90,7 @@ echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/particiones.txt
 echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaL/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaL/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/listado_de_disco_particiones.txt
-echo martha456 | sudo -S ls /root && sudo demidecode system > $rutaL/system.txt
+echo martha456 | sudo -S ls /root && sudo dmidecode system > $rutaL/system.txt
 echo martha456 | sudo -S ls /root && sudo lshw > $rutaL/lshw.txt
 
 datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'  > $rutaL/perfil.txt
@@ -105,7 +105,7 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup gnome-terminal  --title="terminal_1" -- sh /home/ghiatest/git/caract.sh
+nohup gnome-terminal  --title="terminal_1" -- sh /home/ghiatest/git/yad.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
 sleep 2s
 wmctrl -r "terminal_1" -t 1
