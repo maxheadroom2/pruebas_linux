@@ -9,23 +9,23 @@ fnUpdateFieldsSBR() {
     #rutaL=/mnt/c/Users/sinte/github/pruebas_linux
 
     # para las busquedas avanzadas de dmidecode usar sudo dmidecode system | grep -A 2 'BIOS Information'  | grep Versio
-    numSerie=$(cat $rutaL/dmidecode/processor.txt | grep  -A 7 'System Information' | grep -o 'Serial Number:.*' | cut -f2- -d: | sed -e 's/^\s*//')
-    datoMod=$(cat $rutaL/dmidecode/processor.txt | grep  -A 7 'System Information' | grep -o 'SKU Number:.*' | cut -f2- -d: | sed -e 's/^\s*//')
+    numSerie=$(cat $rutaL/processor.txt | grep  -A 7 'System Information' | grep -o 'Serial Number:.*' | cut -f2- -d: | sed -e 's/^\s*//')
+    datoMod=$(cat $rutaL/processor.txt | grep  -A 7 'System Information' | grep -o 'SKU Number:.*' | cut -f2- -d: | sed -e 's/^\s*//')
     datoPro=$(grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
-    datoPro1=$(cat $rutaL/dmidecode/system.txt | grep  -A 5 'Processor Information' | grep -o 'Socket Designation:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoPro1=$(cat $rutaL/system.txt | grep  -A 5 'Processor Information' | grep -o 'Socket Designation:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
     datoRam=$(grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }')
     datoRam1=$(echo martha456 | sudo -S ls /root && sudo lswh |  grep  -A 5 'System Information' | grep -o 'tamaño:.*' | cut -f2- -d: | sed -e 's/^\s*//')
     datoDisc=$(grep -n "/0/1/0.0.0" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
     datoPart=$(cat $rutaL/particiones.txt)
 
-    datoMoth=$(cat $rutaL/dmidecode/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Product Name:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
-    datoMoth1=$(cat $rutaL/dmidecode/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Version:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
-    datoMoth2=$(cat $rutaL/dmidecode/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Manufacturer:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
-    datoMoth3=$(cat $rutaL/dmidecode/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Serial Number:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoMoth=$(cat $rutaL/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Product Name:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoMoth1=$(cat $rutaL/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Version:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoMoth2=$(cat $rutaL/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Manufacturer:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoMoth3=$(cat $rutaL/system.txt | grep  -A 5 'Base Board Information' | grep -o 'Serial Number:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
 
-    datoBios=$(cat $rutaL/dmidecode/system.txt | grep  -A 4 'BIOS Information' | grep grep -o 'Version:.*' | cut -f2- -d:   | sed -e 's/^\s*//')
-    datoBios1=$(cat $rutaL/dmidecode/system.txt | grep  -A 4 'BIOS Information' | grep -o 'Vendor:.*' | cut -f2- -d:   | sed -e 's/^\s*//')
-    datoBios2=$(cat $rutaL/dmidecode/system.txt | grep  -A 4 'BIOS Information' | grep -o 'Release:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
+    datoBios=$(cat $rutaL/system.txt | grep  -A 4 'BIOS Information' | grep grep -o 'Version:.*' | cut -f2- -d:   | sed -e 's/^\s*//')
+    datoBios1=$(cat $rutaL/system.txt | grep  -A 4 'BIOS Information' | grep -o 'Vendor:.*' | cut -f2- -d:   | sed -e 's/^\s*//')
+    datoBios2=$(cat $rutaL/system.txt | grep  -A 4 'BIOS Information' | grep -o 'Release:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
 
 
     echo "2:${numSerie:- }"
