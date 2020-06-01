@@ -90,6 +90,7 @@ echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/particiones.txt
 echo martha456 | sudo -S ls /root && sudo cat /sys/firmware/acpi/tables/MSDM* >> $rutaL/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo ls -l /sys/firmware/acpi/tables >> $rutaL/hardware_corto.txt
 echo martha456 | sudo -S ls /root && sudo lsblk -fm > $rutaL/listado_de_disco_particiones.txt
+echo martha456 | sudo -S ls /root && sudo demidecode system > $rutaL/system.txt
 
 datoRam= grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }'  > $rutaL/perfil.txt
 datoPro= grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }' >> $rutaL/perfil.txt
