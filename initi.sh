@@ -105,7 +105,7 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup xterm -hold -e --title="terminal_1" 'bash /home/ghiatest/git/yad.shr' &
+nohup xterm -hold -e -T "terminal_1" 'bash /home/ghiatest/git/yad.shr' &
 sleep 2s
 wmctrl -r "terminal_1" -t 1
 wmctrl -r "Caracteristicas" -t 1
