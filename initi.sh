@@ -105,7 +105,9 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup bash /home/ghiatest/git/yad.sh
+nohup gnome-terminal --title="terminal_1" bash /home/ghiatest/git/yad.sh
+wmctrl -r "terminal_1" -t 1
+
 # sh /home/ghiatest/git/yad.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
 
