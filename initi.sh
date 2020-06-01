@@ -108,10 +108,6 @@ echo $datoPart
 nohup bash /home/ghiatest/git/yad.sh
 # sh /home/ghiatest/git/yad.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
-sleep 2s
-wmctrl -r "terminal_1" -t 1
-wmctrl -r "terminal_1" -e 10,451,105,883,588
-wmctrl -r "Caracteristicas" -t 1
-wmctrl -r "Caracteristicas" -e 10,451,105,883,588
 
-notify-send "Termino"
+
+notify-send "Termino" "Termina initi.sh"
