@@ -14,7 +14,7 @@ fnUpdateFieldsSBR() {
     datoPro=$(grep -n "processor" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
     datoPro1=$(cat $rutaL/system.txt | grep  -A 5 'Processor Information' | grep -o 'Socket Designation:.*' | cut -f2- -d:  | sed -e 's/^\s*//')
     datoRam=$(grep -n "DIMM" $rutaL/hardware_corto.txt |  awk -F" " '{ for (x=3; x<=20; x++) printf("%s ", $x);printf("\n"); }')
-    datoRam1=$(echo martha456 | sudo -S ls /root && sudo lswh |  grep  -A 5 'System Information' | grep -o 'tamaño:.*' | cut -f2- -d: | sed -e 's/^\s*//')
+    datoRam1=$(cat $rutaL/processor.txt | grep  -A 5 'System Information' | grep -o 'tamaño:.*' | cut -f2- -d: | sed -e 's/^\s*//')
     datoDisc=$(grep -n "/0/1/0.0.0" $rutaL/hardware_corto.txt | awk -F" " '{ for (x=3; x<=9; x++) printf("%s ", $x);printf("\n"); }')
     datoPart=$(cat $rutaL/particiones.txt)
 
