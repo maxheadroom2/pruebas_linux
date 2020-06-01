@@ -109,6 +109,7 @@ nohup xterm -hold -e 'bash /home/ghiatest/git/yad.sh' &
 sleep 2s
 wmctrl -r "yad.sh" -t 1
 wmctrl -r "Caracteristicas" -t 1
+wmctrl -s 1
 
 # sh /home/ghiatest/git/yad.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
