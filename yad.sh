@@ -1,6 +1,7 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 
+notify-send "Script" "Apertura de Caracteristicas " -i terminal -t 2700
 
 fnUpdateFieldsSBR() {
     #para linux
