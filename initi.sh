@@ -105,7 +105,7 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup sh /home/ghiatest/git/yad.sh
+nohup bash /home/ghiatest/git/yad.sh
 # sh /home/ghiatest/git/yad.sh
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
 sleep 2s
