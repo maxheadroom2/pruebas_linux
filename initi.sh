@@ -105,7 +105,8 @@ echo $datoPart
 
 #zenity --question --text "Desea Continuar"
 
-nohup gnome-terminal  --title="terminal_1" -- sh /home/ghiatest/git/yad.sh
+nohup gnome-terminal  --title="terminal_1" -- notify-send "Si jala esta linea"
+# sh /home/ghiatest/git/yad.sh
 notify-send "Apertura de yad"
 # cat $rutaL/perfil.txt  | zenity --text-info --title "Caracteristicas" lo mando a un .sh externo
 sleep 2s
