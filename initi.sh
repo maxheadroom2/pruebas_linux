@@ -22,7 +22,7 @@ killall cava
 killall glmark2
 killall io.elementary.camera
 killall Caracteristicas
-killall terminal_1
+killall yad.sh
 rm -r $rutaP
 # Inician rutinas de pruebas
 # Audio
@@ -107,7 +107,7 @@ echo $datoPart
 
 nohup xterm -hold -e 'bash /home/ghiatest/git/yad.sh' &
 sleep 2s
-#wmctrl -r "terminal_1" -t 1
+wmctrl -r "yad.sh" -t 1
 wmctrl -r "Caracteristicas" -t 1
 
 # sh /home/ghiatest/git/yad.sh
